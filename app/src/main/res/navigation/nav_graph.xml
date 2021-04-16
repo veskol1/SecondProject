@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/jobFragment">
+
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="com.vesko.secondproject.view.jobs.JobFragment"
+        android:label="fragment_job"
+        tools:layout="@layout/fragment_job" >
+        <action
+            android:id="@+id/action_jobFragment_to_jobDetailFragment"
+            app:destination="@id/jobDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobDetailFragment"
+        android:name="com.vesko.secondproject.view.jobdetail.JobDetailFragment"
+        android:label="fragment_job_detail"
+        tools:layout="@layout/fragment_job_detail" >
+        <action
+            android:id="@+id/action_jobDetailFragment_to_jobFragment"
+            app:destination="@id/jobFragment" />
+    </fragment>
+</navigation>
