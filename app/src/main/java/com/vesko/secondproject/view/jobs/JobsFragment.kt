@@ -15,7 +15,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.vesko.secondproject.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class JobsFragment : Fragment(), JobsAdapter.ClickEventHandler {
 
     private lateinit var jobsAdapter: JobsAdapter
@@ -41,7 +43,7 @@ class JobsFragment : Fragment(), JobsAdapter.ClickEventHandler {
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = JobsAdapter( this@JobsFragment)
+            adapter = JobsAdapter(this@JobsFragment)
             jobsAdapter = adapter as JobsAdapter
         }
 

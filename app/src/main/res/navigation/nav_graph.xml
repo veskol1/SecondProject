@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/jobFragment">
+    app:startDestination="@id/JobsFragment">
 
     <fragment
-        android:id="@+id/jobFragment"
-        android:name="com.vesko.secondproject.view.jobs.JobFragment"
+        android:id="@+id/JobsFragment"
+        android:name="com.vesko.secondproject.view.jobs.JobsFragment"
         android:label="fragment_job"
         tools:layout="@layout/fragment_jobs" >
         <action
@@ -21,6 +21,6 @@
         tools:layout="@layout/fragment_job_detail" >
         <action
             android:id="@+id/action_jobDetailFragment_to_jobFragment"
-            app:destination="@id/jobFragment" />
+            app:destination="@id/JobsFragment" />
     </fragment>
 </navigation>
